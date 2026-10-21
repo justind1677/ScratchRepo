@@ -15,3 +15,9 @@ def clamp(value, low, high):
     if low > high:
         raise ValueError("low cannot be greater than high")
     return min(max(value, low), high)
+
+
+def is_even(n):
+    if not isinstance(n, int):
+        raise TypeError("n must be an integer")
+    return n % 2 == 0
