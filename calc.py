@@ -27,3 +27,13 @@ def average(numbers):
     if not numbers:
         raise ValueError("numbers cannot be empty")
     return round(sum(numbers) / len(numbers), 2)
+
+
+def median(numbers):
+    if not numbers:
+        raise ValueError("numbers cannot be empty")
+    ordered = sorted(numbers)
+    middle = len(ordered) // 2
+    if len(ordered) % 2:
+        return ordered[middle]
+    return (ordered[middle - 1] + ordered[middle]) / 2
