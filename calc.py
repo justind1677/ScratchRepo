@@ -21,3 +21,9 @@ def is_even(n):
     if not isinstance(n, int):
         raise TypeError("n must be an integer")
     return n % 2 == 0
+
+
+def average(numbers):
+    if not numbers:
+        raise ValueError("numbers cannot be empty")
+    return round(sum(numbers) / len(numbers), 2)
