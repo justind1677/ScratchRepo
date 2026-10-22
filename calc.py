@@ -37,3 +37,11 @@ def median(numbers):
     if len(ordered) % 2:
         return ordered[middle]
     return (ordered[middle - 1] + ordered[middle]) / 2
+
+
+def sign(value):
+    if value < 0:
+        return -1
+    if value > 0:
+        return 1
+    return 0
